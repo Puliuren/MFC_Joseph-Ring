@@ -1,0 +1,19 @@
+void Joseph(int n, int m, int k)
+{
+    for(int i=1; i<=n; ++i)
+        a[i] = i;
+    int num=0, x=m, ans=0;
+    while(num!=n)
+    {
+       if(a[x]) ans++;
+        if(ans == k)
+        {
+            num++;
+            cout << a[x] << ' ';
+            a[x] = 0;
+            ans=0;
+        }
+        x++;
+        if(x == n+1) x=1;
+    }
+}
